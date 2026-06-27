@@ -22,7 +22,7 @@ origins = [
     "http://localhost:4200", # Angular local dev server
     "http://localhost:8080",
     "http://127.0.0.1:4200",
-    "*" # Puedes refinar esto en produccion con los dominios de Vercel
+    "https://residuos-vmt-frontend.onrender.com"
 ]
 
 app.add_middleware(

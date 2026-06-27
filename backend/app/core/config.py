@@ -9,7 +9,9 @@ class Settings:
     
     # Base de Datos (Mapear a pg8000 que es puro Python para evitar problemas de compilación en Windows)
     DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/residuos_vmt")
-    if DATABASE_URL.startswith("postgresql://"):
+    if DATABASE_URL.startswith("postgres://"):
+        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql+pg8000://", 1)
+    elif DATABASE_URL.startswith("postgresql://"):
         DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+pg8000://", 1)
     
     # JWT Seguridad
