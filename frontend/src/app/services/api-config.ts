@@ -5,7 +5,7 @@
 import { isDevMode } from '@angular/core';
 
 const DEV_API_URL = 'http://localhost:8000';
-const PROD_API_URL = 'https://monitoreo-residuos-vmt.onrender.com'; // Reemplazado con tu URL de Render
+const PROD_API_URL = 'https://monitoreo-residuos-backend.onrender.com'; // Reemplazado con tu nueva URL del backend en Render
 
 export const API_BASE_URL = isDevMode() ? DEV_API_URL : PROD_API_URL;
 
