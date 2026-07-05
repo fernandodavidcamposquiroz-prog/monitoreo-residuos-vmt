@@ -22,12 +22,14 @@ origins = [
     "http://localhost:4200", # Angular local dev server
     "http://localhost:8080",
     "http://127.0.0.1:4200",
-    "https://residuos-vmt-frontend.onrender.com"
+    "https://residuos-vmt-frontend.onrender.com",
+    "https://monitoreo-residuos-vmt-35b8.onrender.com"
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=r"https://.*\.onrender\.com",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
